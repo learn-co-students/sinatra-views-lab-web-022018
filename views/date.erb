@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h1>Today</h1>
+    <% time = Time.new
+    # The date is Wednesday, November 18, 2015
+      day_name_hash = {0 => "Sunday", 1 => "Monday", 2 => "Tuesday", 3 => "Wednesday", 4 => "Thursday", 5 => "Friday", 6 => "Saturday"}
+      month_name_hash = {1 => "January", 2 =>"February", 3 => "March", 4 => "April", 5 => "May", 6 => "June", 7 => "July", 8 => "August", 9 => "September", 10 => "October", 11 => "November", 12 => "December"}
+      output_string = "The date is #{day_name_hash[time.wday]}, #{month_name_hash[time.month]} #{time.day}, #{time.year}"
+    %>
+    <p><%=output_string%></p>
+  </body>
+</html>
